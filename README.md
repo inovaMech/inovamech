@@ -2,7 +2,7 @@
 ## Laboratório de Inovação em Mecatrônica
 
 🌐 **Acesse o site do projeto:**  
-👉 https://jonnybrunno.github.io/INOVAMECH_Site/index.html
+👉 https://inovamech.com.br 
 
 ---
 
