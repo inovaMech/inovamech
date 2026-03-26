@@ -1,0 +1,225 @@
+/* ==================================================
+   VARIÁVEIS
+================================================== */
+:root {
+  --accent: #00e5ff;
+  --accent-soft: rgba(0, 229, 255, 0.25);
+
+  --bg-main: #1f6fa6;
+  --panel-bg: rgba(6, 14, 30, 0.85);
+  --panel-bg-hover: rgba(6, 14, 30, 0.95);
+
+  --text-main: #ffffff;
+  --text-muted: #cfd8dc;
+}
+
+/* ==================================================
+   RESET
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ==================================================
+   BACKGROUND BLUEPRINT
+================================================== */
+body {
+  min-height: 100vh;
+  color: var(--text-main);
+
+  background-color: var(--bg-main);
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.25) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255,255,255,0.7) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(255,255,255,0.7) 2px, transparent 2px);
+
+  background-size:
+    20px 20px,
+    20px 20px,
+    100px 100px,
+    100px 100px;
+}
+
+/* ==================================================
+   LOGO
+================================================== */
+.topbar {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.brand {
+  display: inline-block;
+  padding: 16px 34px;
+  border-radius: 18px;
+  background: rgba(6, 14, 30, 0.55);
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 20px 38px rgba(0,0,0,0.65),
+    0 0 32px rgba(0,229,255,0.35);
+}
+
+.brand h1 {
+  font-size: 38px;
+  letter-spacing: 4px;
+  color: var(--accent);
+
+  text-shadow:
+    0 6px 14px rgba(0,0,0,0.95),
+    0 0 30px rgba(0,229,255,0.9);
+}
+
+/* ==================================================
+   MENU CENTRAL (ABAS)
+================================================== */
+.tabs-center {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+
+  margin: 40px auto 70px;
+  padding: 18px 30px;
+
+  width: fit-content;
+  background: var(--panel-bg);
+  border-radius: 24px;
+
+  box-shadow:
+    0 18px 36px rgba(0,0,0,0.55),
+    0 0 26px rgba(0,229,255,0.18);
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 16px;
+
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+  border-color: var(--accent);
+  box-shadow: 0 0 14px rgba(0,229,255,0.45);
+}
+
+.tab-btn.active {
+  color: var(--text-main);
+  border-color: var(--accent);
+  background: rgba(0,229,255,0.15);
+}
+
+/* ==================================================
+   CONTEÚDO
+================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 90px;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ==================================================
+   CARDS
+================================================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+
+  background: var(--panel-bg);
+  border-radius: 20px;
+  padding: 34px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: all 0.3s ease;
+}
+
+.card h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.card p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: var(--panel-bg-hover);
+  border-color: var(--accent-soft);
+
+  box-shadow:
+    0 22px 34px rgba(0,0,0,0.5),
+    0 0 26px rgba(0,229,255,0.25);
+}
+
+/* ==================================================
+   RODAPÉ
+================================================== */
+.footer {
+  text-align: center;
+  padding: 26px;
+  background: rgba(6, 14, 30, 0.9);
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ==================================================
+   ANIMAÇÕES
+================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+@media (max-width: 768px) {
+  .tabs-center {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+  }
+
+  .brand h1 {
+    font-size: 30px;
+  }
+}

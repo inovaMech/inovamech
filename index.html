@@ -1,10 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>inovaMech</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>INOVAMECH | Educação Maker</title>
+  <meta name="description" content="Educação maker com robótica, programação, impressão 3D e projetos DIY.">
+
+  <link rel="stylesheet" href="style_inovamech.css">
 </head>
 <body>
-  <h1>inovaMech</h1>
-  <p>Site em construção</p>
+
+  <!-- LOGO -->
+  <header class="topbar">
+    <div class="brand">
+      <h1>INOVAMECH</h1>
+    </div>
+  </header>
+
+  <!-- MENU CENTRAL -->
+  <nav class="tabs-center" aria-label="Menu principal">
+    <button class="tab-btn active" data-tab="videos">Vídeos</button>
+    <button class="tab-btn" data-tab="tutoriais">Tutoriais</button>
+    <button class="tab-btn" data-tab="artigos">Artigos</button>
+    <button class="tab-btn" data-tab="academico">Acadêmico</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- VÍDEOS -->
+    <section id="videos" class="tab-content active">
+      <div class="cards">
+        <a class="card" href="pages/robotica.html">
+          <h4>Robótica com Arduino</h4>
+          <p>Projetos práticos com sensores.</p>
+        </a>
+
+        <a class="card" href="pages/impressao3d.html">
+          <h4>Impressão 3D</h4>
+          <p>Modelagem e calibração.</p>
+        </a>
+
+        <a class="card" href="pages/programacao.html">
+          <h4>Programação</h4>
+          <p>Python e automação.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- TUTORIAIS -->
+    <section id="tutoriais" class="tab-content">
+      <div class="cards">
+        <a class="card" href="pages/robotica.html">
+          <h4>Drones</h4>
+          <p>Montagem e testes.</p>
+        </a>
+
+        <a class="card" href="pages/robotica.html">
+          <h4>Projetos DIY</h4>
+          <p>Maker na prática.</p>
+        </a>
+
+        <a class="card" href="pages/programacao.html">
+          <h4>Automação</h4>
+          <p>ESP32 e IoT.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ARTIGOS -->
+    <section id="artigos" class="tab-content">
+      <div class="cards">
+        <a class="card" href="pages/robotica.html">
+          <h4>Eletrônica</h4>
+          <p>Fundamentos.</p>
+        </a>
+
+        <a class="card" href="pages/robotica.html">
+          <h4>Robótica</h4>
+          <p>Cinemática e controle.</p>
+        </a>
+
+        <a class="card" href="pages/impressao3d.html">
+          <h4>Materiais</h4>
+          <p>Manufatura.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ACADÊMICO -->
+    <section id="academico" class="tab-content">
+      <div class="cards">
+        <a class="card" href="pages/academico.html">
+          <h4>Apostilas</h4>
+          <p>PDFs organizados.</p>
+        </a>
+
+        <a class="card" href="pages/academico.html">
+          <h4>Resumos</h4>
+          <p>Conteúdo direto.</p>
+        </a>
+
+        <a class="card" href="pages/academico.html">
+          <h4>Referências</h4>
+          <p>Artigos científicos.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    © 2025 INOVAMECH • Educação Maker
+  </footer>
+
+  <script src="script_inovamech.js"></script>
 </body>
 </html>
+
+
