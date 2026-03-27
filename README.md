@@ -1,7 +1,7 @@
-# INOVAMECH  
+# inovaMech 
 ## Laboratório de Inovação em Mecatrônica
 
-🌐 **Acesse o site do projeto:**  
+**Acesse o site do projeto:**  
 👉 https://inovamech.com.br 
 
 ---
@@ -12,14 +12,14 @@ Incorporado ao **NUPEM (Núcleo de Pesquisa em Engenharia Mecatrônica)**, o INO
 
 ---
 
-## 📂 Sobre este Repositório
+## Sobre este Repositório
 
 Este repositório tem como finalidade:
 
-- 🖥️ **Desenvolvimento e manutenção do site oficial do INOVAMECH**
-- 📁 Armazenamento de **projetos, códigos, protótipos e documentos técnicos**
-- 📊 Organização de pesquisas, experimentos e materiais de apoio
-- 🤝 Facilitar a colaboração entre estudantes, pesquisadores e parceiros
+- **Desenvolvimento e manutenção do site oficial do INOVAMECH**
+- Armazenamento de **projetos, códigos, protótipos e documentos técnicos**
+- Organização de pesquisas, experimentos e materiais de apoio
+- Facilitar a colaboração entre estudantes, pesquisadores e parceiros
 
 A estrutura do repositório pode conter, entre outros:
 
@@ -30,7 +30,7 @@ A estrutura do repositório pode conter, entre outros:
 
 ---
 
-## 🎯 Objetivos do Laboratório
+## Objetivos do Laboratório
 
 O INOVAMECH tem como principais objetivos:
 
@@ -42,7 +42,7 @@ O INOVAMECH tem como principais objetivos:
 
 ---
 
-## 🧪 Infraestrutura e Tecnologias
+## Infraestrutura e Tecnologias
 
 A infraestrutura do INOVAMECH conta com equipamentos e recursos modernos, incluindo:
 
@@ -55,7 +55,7 @@ A infraestrutura do INOVAMECH conta com equipamentos e recursos modernos, inclui
 
 ---
 
-## 🔬 Linhas de Pesquisa
+## Linhas de Pesquisa
 
 O laboratório apoia e desenvolve projetos nas seguintes linhas principais:
 
@@ -67,7 +67,7 @@ O laboratório apoia e desenvolve projetos nas seguintes linhas principais:
 
 ---
 
-## 🏭 Integração com a Indústria
+## Integração com a Indústria
 
 O INOVAMECH atua como um **hub de inovação**, promovendo:
 
@@ -79,7 +79,7 @@ O INOVAMECH atua como um **hub de inovação**, promovendo:
 
 ---
 
-## 👥 Público Envolvido
+## Público Envolvido
 
 O INOVAMECH envolve:
 
@@ -89,7 +89,7 @@ O INOVAMECH envolve:
 
 ---
 
-## 🌱 Impacto
+## Impacto
 
 Com foco na criação de tecnologias alinhadas às demandas emergentes da indústria e da sociedade, o INOVAMECH contribui para:
 
@@ -100,6 +100,6 @@ Com foco na criação de tecnologias alinhadas às demandas emergentes da indús
 
 ---
 
-## 📌 Observação
+## Observação
 
 Este repositório está em constante evolução, acompanhando o crescimento do laboratório, seus projetos e o desenvolvimento do site institucional.
