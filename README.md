@@ -6,7 +6,7 @@
 
 ---
 
-O **INOVAMECH – Laboratório de Inovação em Mecatrônica** é um ambiente interdisciplinar dedicado ao desenvolvimento de **tecnologias avançadas em automação e sistemas inteligentes**, integrando de forma estratégica as áreas de **mecânica, eletrônica, computação e controle**.
+O **inovaMech – Laboratório de Inovação em Mecatrônica** é um ambiente interdisciplinar dedicado ao desenvolvimento de **tecnologias avançadas em automação e sistemas inteligentes**, integrando de forma estratégica as áreas de **mecânica, eletrônica, computação e controle**.
 
 Incorporado ao **NUPEM (Núcleo de Pesquisa em Engenharia Mecatrônica)**, o INOVAMECH atua como um polo de pesquisa, inovação e desenvolvimento tecnológico, promovendo a integração entre **academia, indústria e sociedade**.
 
@@ -32,7 +32,7 @@ A estrutura do repositório pode conter, entre outros:
 
 ## Objetivos do Laboratório
 
-O INOVAMECH tem como principais objetivos:
+O inovaMech tem como principais objetivos:
 
 - Fomentar pesquisas aplicadas voltadas à **indústria, sistemas autônomos e sustentáveis**
 - Desenvolver soluções tecnológicas com foco em **eficiência energética e conforto ambiental**
@@ -44,7 +44,7 @@ O INOVAMECH tem como principais objetivos:
 
 ## Infraestrutura e Tecnologias
 
-A infraestrutura do INOVAMECH conta com equipamentos e recursos modernos, incluindo:
+A infraestrutura do inovaMech conta com equipamentos e recursos modernos, incluindo:
 
 - Sistemas de **prototipagem rápida**
 - Estações de **simulação e modelagem computacional**
@@ -69,7 +69,7 @@ O laboratório apoia e desenvolve projetos nas seguintes linhas principais:
 
 ## Integração com a Indústria
 
-O INOVAMECH atua como um **hub de inovação**, promovendo:
+O inovaMech atua como um **laboratório de inovação em Engenharia Mecatrônica**, promovendo:
 
 - Parcerias com empresas e instituições
 - Desenvolvimento de **pesquisa aplicada**
@@ -91,7 +91,7 @@ O INOVAMECH envolve:
 
 ## Impacto
 
-Com foco na criação de tecnologias alinhadas às demandas emergentes da indústria e da sociedade, o INOVAMECH contribui para:
+Com foco na criação de tecnologias alinhadas às demandas emergentes da indústria e da sociedade, o inovaMech contribui para:
 
 - Avanços em **automação e sistemas inteligentes**
 - Melhoria da **eficiência energética e sustentabilidade**
