@@ -223,3 +223,70 @@ body {
     font-size: 30px;
   }
 }
+
+/* ==================================================
+   README (SOBRE O INOVAMECH)
+================================================== */
+
+.readme-section {
+  margin-top: 20px;
+  padding: 30px;
+  background: var(--panel-bg);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 20px 30px rgba(0,0,0,0.5),
+    0 0 20px rgba(0,229,255,0.15);
+}
+
+/* títulos */
+.readme-section h1,
+.readme-section h2,
+.readme-section h3 {
+  color: var(--accent);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* parágrafos */
+.readme-section p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* listas */
+.readme-section ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.readme-section li {
+  margin-bottom: 6px;
+}
+
+/* links */
+.readme-section a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.readme-section a:hover {
+  text-decoration: underline;
+}
+
+/* código */
+.readme-section code {
+  background: rgba(0,0,0,0.4);
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.readme-section pre {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
