@@ -1,149 +1,275 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>inovaMech | Aprendizagem baseada em projetos e prototipagem</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description"
-        content="Aprendizagem baseada em projetos e prototipagem aplicada à robótica, programação e fabricação digital, com desenvolvimento de sistemas físicos e soluções tecnológicas.">
+  <title>INOVAMECH | Educação Maker</title>
 
-  <link rel="stylesheet" href="style_inovamech.css">
+  <meta
+    name="description"
+    content="Laboratório de inovação em mecatrônica, automação, IA, IoT, robótica e sistemas inteligentes."
+  >
+
+  <link
+    rel="stylesheet"
+    href="style_inovamech.css"
+  >
+
 </head>
 
 <body>
 
-  <!-- LOGO -->
+  <!-- ==================================================
+       ÍCONE INSTAGRAM (fixo, mesmo layout dos outros ícones)
+  ================================================== -->
+
+  <a
+    href="https://instagram.com/inovamech.eng"
+    target="_blank"
+    class="social-button"
+  >
+
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1"/>
+    </svg>
+
+  </a>
+
+
+  <!-- ==================================================
+       TOPO
+  ================================================== -->
+
   <header class="topbar">
-    <img
-      src="logoBranco-removebg.png"
-      alt="Logo inovaMech"
-      style="
-        width: 300px;
-        max-width: 100vw;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-      ">
+
+    <div class="brand">
+
+      <img
+        src="logoBranco-removebg.png"
+        alt="INOVAMECH"
+        class="brand-logo"
+      >
+
+    </div>
+
   </header>
 
-  <!-- MENU CENTRAL -->
-  <nav class="tabs-center" aria-label="Menu principal">
-    <button class="tab-btn active" data-tab="videos">Vídeos</button>
-    <button class="tab-btn" data-tab="tutoriais">Tutoriais</button>
-    <button class="tab-btn" data-tab="artigos">Artigos</button>
-    <button class="tab-btn" data-tab="academico">Acadêmico</button>
-    <button class="tab-btn" data-tab="sobre">Sobre o Inovamech</button>
+
+  <!-- ==================================================
+       MENU PRINCIPAL - 5 EIXOS DE INOVAÇÃO
+  ================================================== -->
+
+  <nav class="tabs-center">
+
+    <a href="pages/robotica-sistemas.html" class="tab-link">
+      Robótica e Sistemas Inteligentes
+    </a>
+
+    <a href="pages/construcao-4.0.html" class="tab-link">
+      Construção 4.0
+    </a>
+
+    <a href="pages/automacao-industrial.html" class="tab-link">
+      Automação Industrial
+    </a>
+
+    <a href="pages/mineracao-processos.html" class="tab-link">
+      Mineração de Processos
+    </a>
+
+    <a href="pages/energias-renovaveis.html" class="tab-link">
+      Energias Renováveis
+    </a>
+
+    <a href="pages/sobre.html" class="tab-link">
+      Sobre o INOVAMECH
+    </a>
+
   </nav>
+
+
+  <!-- ==================================================
+       CONTAINER
+  ================================================== -->
 
   <main class="container">
 
-    <!-- VÍDEOS -->
-    <section id="videos" class="tab-content active">
-      <div class="cards">
 
-        <a class="card" href="pages/robotica.html">
-          <h4>Robótica com Arduino</h4>
-          <p>Projetos práticos com sensores.</p>
-        </a>
+    <!-- ==================================================
+         HERO
+    ================================================== -->
 
-        <a class="card" href="pages/impressao3d.html">
-          <h4>Impressão 3D</h4>
-          <p>Modelagem e calibração.</p>
-        </a>
+    <section class="hero-card">
 
-        <a class="card" href="pages/programacao.html">
-          <h4>Programação</h4>
-          <p>Python e automação.</p>
-        </a>
+      <h2>
+        Laboratório de Inovação em Mecatrônica
+      </h2>
 
-      </div>
+      <p>
+
+        O INOVAMECH – Laboratório de Inovação em Mecatrônica é um ambiente interdisciplinar voltado ao desenvolvimento de tecnologias avançadas em automação, robótica, sistemas inteligentes e engenharia aplicada, integrando de forma estratégica as áreas de mecânica, eletrônica, computação, controle e inteligência artificial.
+
+        Incorporado ao NUPEM (Núcleo de Pesquisa em Engenharia Mecatrônica), o laboratório atua como um polo de pesquisa, inovação e desenvolvimento tecnológico, promovendo a conexão entre academia, indústria e sociedade por meio da criação de soluções inteligentes, sustentáveis e de alto impacto tecnológico.
+
+        O laboratório desenvolve projetos em automação de sistemas, Internet das Coisas (IoT), Inteligência Artificial (IA), Machine Learning, sistemas autônomos, modelagem computacional, eficiência energética, controle de sistemas dinâmicos e tecnologias embarcadas.
+
+        Além da pesquisa aplicada, o INOVAMECH também promove capacitação técnica, colaboração científica, integração com empresas, desenvolvimento de protótipos, documentação técnica, projetos acadêmicos e iniciativas voltadas à transformação tecnológica e inovação industrial.
+
+      </p>
+
     </section>
 
-    <!-- TUTORIAIS -->
-    <section id="tutoriais" class="tab-content">
-      <div class="cards">
 
-        <a class="card" href="pages/robotica.html">
-          <h4>Drones</h4>
-          <p>Montagem e testes.</p>
-        </a>
+    <!-- ==================================================
+         DESTAQUES
+    ================================================== -->
 
-        <a class="card" href="pages/robotica.html">
-          <h4>Projetos DIY</h4>
-          <p>Maker na prática.</p>
-        </a>
+    <section class="section-area">
 
-        <a class="card" href="pages/programacao.html">
-          <h4>Automação</h4>
-          <p>ESP32 e IoT.</p>
-        </a>
+      <div class="section-header">
+
+        <h2>
+          Must See • Publicações em Destaque
+        </h2>
 
       </div>
+
+      <div
+        class="drive-grid"
+        id="destaques-grid"
+      >
+      </div>
+
     </section>
 
-    <!-- ARTIGOS -->
-    <section id="artigos" class="tab-content">
-      <div class="cards">
 
-        <a class="card" href="pages/robotica.html">
-          <h4>Eletrônica</h4>
-          <p>Fundamentos.</p>
+    <!-- ==================================================
+         RECOMENDAÇÕES
+    ================================================== -->
+
+    <section class="section-area">
+
+      <div class="section-header">
+
+        <h2>
+          Recomendações para Estudos
+        </h2>
+
+      </div>
+
+      <div class="recommend-grid">
+
+
+        <!-- WOKWI -->
+
+        <a
+          class="recommend-card"
+          href="https://wokwi.com"
+          target="_blank"
+        >
+
+          <h3>
+            Wokwi
+          </h3>
+
+          <p>
+
+            Plataforma online para simulação
+            de Arduino, ESP32, sensores,
+            displays e sistemas embarcados.
+
+          </p>
+
         </a>
 
-        <a class="card" href="pages/robotica.html">
-          <h4>Robótica</h4>
-          <p>Cinemática e controle.</p>
+
+        <!-- UNIROBOTICA -->
+
+        <a
+          class="recommend-card"
+          href="https://unirobotica.com.br"
+          target="_blank"
+        >
+
+          <h3>
+            UniRobótica
+          </h3>
+
+          <p>
+
+            Conteúdos educacionais,
+            materiais didáticos e
+            projetos de robótica.
+
+          </p>
+
         </a>
 
-        <a class="card" href="pages/impressao3d.html">
-          <h4>Materiais</h4>
-          <p>Manufatura.</p>
+
+        <!-- GITHUB -->
+
+        <a
+          class="recommend-card"
+          href="https://github.com/inovaMech"
+          target="_blank"
+        >
+
+          <h3>
+            GitHub INOVAMECH
+          </h3>
+
+          <p>
+
+            Repositórios, códigos,
+            projetos, automações
+            e documentação técnica.
+
+          </p>
+
         </a>
 
       </div>
-    </section>
 
-    <!-- ACADÊMICO -->
-    <section id="academico" class="tab-content">
-      <div class="cards">
-
-        <a class="card" href="pages/academico.html">
-          <h4>Trabalhos por semestre</h4>
-          <p>Projetos organizados por período acadêmico.</p>
-        </a>
-
-        <a class="card" href="pages/academico.html">
-          <h4>Apostilas</h4>
-          <p>Materiais e conteúdos organizados.</p>
-        </a>
-
-        <a class="card" href="pages/academico.html">
-          <h4>Referências</h4>
-          <p>Artigos e bases científicas.</p>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="tab-content">
-      <div class="readme-section">
-        <h3>Sobre o Inovamech</h3>
-        <div id="readme-content">Carregando...</div>
-      </div>
     </section>
 
   </main>
 
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+
   <footer class="footer">
-    © 2025 inovaMech - Aprendizagem baseada em projetos e prototipagem.
-    Todos os direitos reservados.
+
+    © 2025 INOVAMECH • Laboratório de Inovação em Mecatrônica
+
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- ==================================================
+       SCRIPT
+  ================================================== -->
+
   <script src="script_inovamech.js"></script>
 
+  <script>
+
+    loadDriveFiles(
+      "10sUVNboOMqffyNiBE2jNOBa5j6PjT3AZ",
+      "destaques-grid"
+    );
+
+  </script>
+
 </body>
+
 </html>
