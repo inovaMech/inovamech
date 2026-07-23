@@ -266,15 +266,8 @@ async function loadDriveFiles(
 
     if(files.length === 0){
 
-      container.innerHTML = `
-
-        <div class="empty-message">
-
-          Nenhum arquivo encontrado.
-
-        </div>
-
-      `;
+      // quando não há arquivos, não mostrar mensagem -- manter container vazio
+      container.innerHTML = "";
 
       return;
 
@@ -295,6 +288,32 @@ async function loadDriveFiles(
 
     const pageName =
     getPageName();
+
+
+    /* =========================================
+       OPTIONAL FILTERS (por página/pasta)
+       Remover itens que não pertencem aqui
+    ========================================= */
+
+    // Excluir itens por nome para a página de Robótica (projetos)
+    if(pageName === "robotica-sistemas" && containerId === "grid-projetos"){
+      files = files.filter(f => {
+        const n = (f.name || "").toLowerCase();
+        // remover itens que mencionam mineração ou fundamentos de mineração
+        if(n.includes("minera") && n.includes("fund")) return false;
+        if(n.includes("fundamentos de minera") || n.includes("fundamentos de mineração")) return false;
+        return true;
+      });
+    }
+
+    // Excluir exercícios listados em Projetos por Turmas
+    if(pageName === "robotica-sistemas" && containerId === "grid-projetos-turmas"){
+      files = files.filter(f => {
+        const n = (f.name || "").toLowerCase();
+        if(n.includes("exerc") || n.includes("exercício") || n.includes("exercicio")) return false;
+        return true;
+      });
+    }
 
 
     /* =========================================
@@ -324,35 +343,80 @@ async function loadDriveFiles(
 
 
       /* =====================================
-         CARD
+         DETERMINE SE O CARD DEVE SER ATIVO
+         - desativar se for pasta
+         - desativar se não tiver nome
+         - desativar se não tiver thumbnailLink (provavelmente sem arquivo)
       ===================================== */
 
-      const card = `
+      const isFolder = file.mimeType === "application/vnd.google-apps.folder";
+      const hasName = (file.name || "").trim().length > 0;
+      const hasThumbnail = !!file.thumbnailLink;
 
-        <a
-          href="${viewerPath}?id=${file.id}&from=${fromParam}"
-          class="drive-card"
-        >
+      const shouldDisable = isFolder || !hasName || !hasThumbnail;
 
-          <img
-            src="${preview}"
-            alt="${file.name}"
-            class="drive-preview"
-          >
+      /* =====================================
+         CARD (ativo ou desativado)
+      ===================================== */
 
-          <div class="drive-info">
+      let card = "";
 
-            <h3>
+      if(shouldDisable){
 
-              ${file.name}
+        card = `
 
-            </h3>
+          <div class="drive-card disabled" aria-disabled="true">
+
+            <img
+              src="${preview}"
+              alt="${file.name || "Sem título"}"
+              class="drive-preview"
+            >
+
+            <div class="drive-info">
+
+              <h3>
+
+                ${file.name || "Sem título"}
+
+              </h3>
+
+            </div>
 
           </div>
 
-        </a>
+        `;
 
-      `;
+      } else {
+
+        card = `
+
+          <a
+            href="${viewerPath}?id=${file.id}&from=${fromParam}"
+            class="drive-card"
+          >
+
+            <img
+              src="${preview}"
+              alt="${file.name}"
+              class="drive-preview"
+            >
+
+            <div class="drive-info">
+
+              <h3>
+
+                ${file.name}
+
+              </h3>
+
+            </div>
+
+          </a>
+
+        `;
+
+      }
 
 
       container.innerHTML +=

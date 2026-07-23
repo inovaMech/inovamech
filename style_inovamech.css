@@ -652,6 +652,19 @@ body{
 }
 
 
+.drive-card.disabled{
+
+  opacity:0.68;
+
+  transform:none;
+
+  cursor:default;
+
+  pointer-events:none;
+
+}
+
+
 /* ==================================================
    PREVIEW
 ================================================== */
