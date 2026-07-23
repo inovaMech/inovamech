@@ -14,12 +14,23 @@ function configureJoinTeamForm(){
 
   const form =
   document.getElementById("join-team-form");
+  const status =
+  document.getElementById("join-team-status");
 
   if(!form) return;
 
-  form.addEventListener("submit", event => {
+  form.addEventListener("submit", async event => {
 
     event.preventDefault();
+
+    const submitButton =
+    form.querySelector('button[type="submit"]');
+
+    submitButton?.setAttribute("disabled", "disabled");
+    if(status){
+      status.textContent = "Enviando...";
+      status.classList.remove("error", "success");
+    }
 
     const formData =
     new FormData(form);
@@ -36,14 +47,58 @@ function configureJoinTeamForm(){
     const message =
     formData.get("message");
 
-    const body =
+    const payload = {
+      name,
+      email,
+      interest,
+      message,
+    };
+
+    const endpoint =
+    "https://formsubmit.co/ajax/inovamechdcet1@uneb.br";
+
+    const mailtoBody =
     `Nome: ${name}\nE-mail: ${email}\nVínculo ou área de interesse: ${interest}\n\nMensagem:\n${message}`;
 
     const mailto =
-    `mailto:inovamechdcet1@uneb.br?cc=inovamech.eng@gmail.com&subject=${encodeURIComponent("Interesse em fazer parte do INOVAMECH")}&body=${encodeURIComponent(body)}`;
+    `mailto:inovamechdcet1@uneb.br?cc=inovamech.eng@gmail.com&subject=${encodeURIComponent("Interesse em fazer parte do INOVAMECH")}&body=${encodeURIComponent(mailtoBody)}`;
 
-    window.location.href = mailto;
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
+      if(!response.ok){
+        throw new Error("Resposta do servidor não OK");
+      }
+
+      const data = await response.json();
+
+      if(data.success === true || data.success === "true"){
+        if(status){
+          status.textContent =
+          "Enviado com sucesso! Obrigado pelo interesse.";
+          status.classList.add("success");
+        }
+        form.reset();
+      } else {
+        throw new Error(data.message || "Erro no envio direto.");
+      }
+    } catch (error) {
+      if(status){
+        status.textContent =
+        "Não foi possível enviar diretamente. Abrindo o cliente de e-mail como alternativa...";
+        status.classList.add("error");
+      }
+      window.location.href = mailto;
+    } finally {
+      submitButton?.removeAttribute("disabled");
+    }
   });
 
 }

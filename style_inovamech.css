@@ -404,6 +404,8 @@ body{
 
   border-radius:10px;
 
+  background:rgba(255,255,255,0.08);
+
   color:var(--accent);
 
   text-decoration:none;
@@ -418,9 +420,33 @@ body{
 
 .join-team-link:hover{
 
-  color:#06101e;
-
   background:var(--accent);
+
+  color:#06101e;
+}
+
+
+.join-team-status{
+
+  margin-top:8px;
+
+  font-size:0.94rem;
+
+  line-height:1.4;
+
+  color:#06101e;
+}
+
+
+.join-team-status.error{
+
+  color:#9b1a1a;
+}
+
+
+.join-team-status.success{
+
+  color:#116a26;
 }
 
 
