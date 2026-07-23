@@ -7,6 +7,97 @@ const API_KEY =
 
 
 /* ==================================================
+   FORMULÁRIO DE PARTICIPAÇÃO
+================================================== */
+
+function configureJoinTeamForm(){
+
+  const form =
+  document.getElementById("join-team-form");
+
+  if(!form) return;
+
+  form.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const formData =
+    new FormData(form);
+
+    const name =
+    formData.get("name");
+
+    const email =
+    formData.get("email");
+
+    const interest =
+    formData.get("interest");
+
+    const message =
+    formData.get("message");
+
+    const body =
+    `Nome: ${name}\nE-mail: ${email}\nVínculo ou área de interesse: ${interest}\n\nMensagem:\n${message}`;
+
+    const mailto =
+    `mailto:inovamechdcet1@uneb.br?cc=inovamech.eng@gmail.com&subject=${encodeURIComponent("Interesse em fazer parte do INOVAMECH")}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+
+  });
+
+}
+
+
+configureJoinTeamForm();
+
+
+/* ==================================================
+   FAVICONS DAS RECOMENDAÇÕES
+================================================== */
+
+function loadRecommendationFavicons(){
+
+  document
+    .querySelectorAll(".recommend-logo[data-favicon-url]")
+    .forEach(logo => {
+
+      const websiteUrl =
+      logo.dataset.faviconUrl;
+
+      if(!websiteUrl) return;
+
+      const website =
+      new URL(websiteUrl);
+
+      const ownFavicon =
+      /\.(ico|png|svg|jpg|jpeg|webp)$/i.test(website.pathname)
+        ? website.href
+        : `${website.origin}/favicon.ico`;
+
+      const fallbackFavicon =
+      `https://www.google.com/s2/favicons?domain=${website.hostname}&sz=64`;
+
+      logo.src = ownFavicon;
+
+      logo.onerror = () => {
+
+        logo.onerror = () => {
+
+          logo.removeAttribute("src");
+
+        };
+
+        logo.src = fallbackFavicon;
+
+      };
+
+    });
+
+}
+
+
+/* ==================================================
    VIEWER PATH
 ================================================== */
 

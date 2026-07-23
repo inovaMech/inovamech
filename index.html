@@ -10,7 +10,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>INOVAMECH | Educação Maker</title>
+  <title>INOVAMECH | Educação baseada em Prototipagem para Inovação Mecatrônica (PIM)</title>
 
   <meta
     name="description"
@@ -21,6 +21,8 @@
     rel="stylesheet"
     href="style_inovamech.css"
   >
+
+  <link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
@@ -34,6 +36,7 @@
     href="https://instagram.com/inovamech.eng"
     target="_blank"
     class="social-button"
+    aria-label="Instagram do INOVAMECH"
   >
 
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -42,6 +45,15 @@
       <circle cx="17.5" cy="6.5" r="1"/>
     </svg>
 
+    <span>Instagram</span>
+
+  </a>
+
+  <a
+    class="join-team-top-link"
+    href="pages/sobre.html#join-team"
+  >
+    Venha fazer parte do time →
   </a>
 
 
@@ -103,7 +115,6 @@
 
   <main class="container">
 
-
     <!-- ==================================================
          HERO
     ================================================== -->
@@ -130,9 +141,8 @@
 
 
     <!-- ==================================================
-         DESTAQUES
-    ================================================== -->
-
+         DESTAQUES — reservado para uso futuro
+    ==================================================
     <section class="section-area">
 
       <div class="section-header">
@@ -150,6 +160,7 @@
       </div>
 
     </section>
+    -->
 
 
     <!-- ==================================================
@@ -175,19 +186,18 @@
           class="recommend-card"
           href="https://wokwi.com"
           target="_blank"
+          rel="noopener noreferrer"
         >
+
+          <img
+            class="recommend-logo"
+            data-favicon-url="https://wokwi.com"
+            alt=""
+          >
 
           <h3>
             Wokwi
           </h3>
-
-          <p>
-
-            Plataforma online para simulação
-            de Arduino, ESP32, sensores,
-            displays e sistemas embarcados.
-
-          </p>
 
         </a>
 
@@ -198,19 +208,18 @@
           class="recommend-card"
           href="https://unirobotica.com.br"
           target="_blank"
+          rel="noopener noreferrer"
         >
+
+          <img
+            class="recommend-logo"
+            data-favicon-url="https://unirobotica.com.br/favicon.png"
+            alt=""
+          >
 
           <h3>
             UniRobótica
           </h3>
-
-          <p>
-
-            Conteúdos educacionais,
-            materiais didáticos e
-            projetos de robótica.
-
-          </p>
 
         </a>
 
@@ -221,19 +230,18 @@
           class="recommend-card"
           href="https://github.com/inovaMech"
           target="_blank"
+          rel="noopener noreferrer"
         >
+
+          <img
+            class="recommend-logo"
+            data-favicon-url="https://github.com/inovaMech"
+            alt=""
+          >
 
           <h3>
             GitHub INOVAMECH
           </h3>
-
-          <p>
-
-            Repositórios, códigos,
-            projetos, automações
-            e documentação técnica.
-
-          </p>
 
         </a>
 
@@ -250,6 +258,18 @@
 
   <footer class="footer">
 
+    <img
+      src="logo-dcet-uneb.png?v=2"
+      alt="DCET-I UNEB — Departamento de Ciências Exatas e da Terra"
+      class="footer-partner-logo"
+    >
+
+    <img
+      src="logoBranco-removebg.png"
+      alt="INOVAMECH"
+      class="footer-inovamech-logo"
+    >
+
     © 2025 INOVAMECH • Laboratório de Inovação em Mecatrônica
 
   </footer>
@@ -263,12 +283,20 @@
 
   <script>
 
+    loadRecommendationFavicons();
+
+  </script>
+
+  <!-- Carregamento dos destaques reservado para uso futuro
+  <script>
+
     loadDriveFiles(
       "10sUVNboOMqffyNiBE2jNOBa5j6PjT3AZ",
       "destaques-grid"
     );
 
   </script>
+  -->
 
 </body>
 
