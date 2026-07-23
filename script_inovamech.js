@@ -47,13 +47,6 @@ function configureJoinTeamForm(){
     const message =
     formData.get("message");
 
-    const payload = {
-      name,
-      email,
-      interest,
-      message,
-    };
-
     const endpoint =
     "https://formsubmit.co/ajax/inovamechdcet1@uneb.br";
 
@@ -64,13 +57,15 @@ function configureJoinTeamForm(){
     `mailto:inovamechdcet1@uneb.br?cc=inovamech.eng@gmail.com&subject=${encodeURIComponent("Interesse em fazer parte do INOVAMECH")}&body=${encodeURIComponent(mailtoBody)}`;
 
     try {
+      formData.append("_subject", "Interesse em fazer parte do INOVAMECH");
+      formData.append("_captcha", "false");
+
       const response = await fetch(endpoint, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           "Accept": "application/json",
         },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       if(!response.ok){
