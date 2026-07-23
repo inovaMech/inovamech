@@ -47,13 +47,15 @@
 
   <header class="topbar">
 
-<div class="brand">
+    <div class="brand">
 
-  <img
-    src="logoBranco-removebg.png"
-    alt="INOVAMECH"
-    class="brand-logo"
-  >
+      <img
+        src="logoBranco-removebg.png"
+        alt="INOVAMECH"
+        class="brand-logo"
+      >
+
+    </div>
 
   </header>
 
@@ -71,10 +73,13 @@
 
     <section class="viewer-content">
 
-      <iframe
-        id="drive-viewer"
-        allowfullscreen
-      ></iframe>
+      <div class="viewer-empty-state">
+
+        <h2>Conteúdo indisponível</h2>
+
+        <p>Este conteúdo não está mais vinculado a um arquivo externo no site.</p>
+
+      </div>
 
     </section>
 
@@ -94,18 +99,10 @@
 
         <div class="viewer-actions">
 
-          <a
-            id="download-btn"
-            class="viewer-btn"
-            target="_blank"
-          >
-            ⬇ Download
-          </a>
-
-
           <button
             id="favorite-btn"
             class="viewer-btn"
+            disabled
           >
             ⭐ Favoritar
           </button>
@@ -177,87 +174,14 @@
 
   <script>
 
-    /* =====================================
-       PARAMS
-    ====================================== */
-
-    const params =
-
-    new URLSearchParams(
-      window.location.search
-    );
-
-
-    const fileId =
-    params.get("id");
-
-
-    const from =
-    params.get("from");
-
-
-    /* =====================================
-       IFRAME
-    ====================================== */
-
-    const iframe =
-
-    document.getElementById(
-      "drive-viewer"
-    );
-
-
-    iframe.src =
-
-    `https://drive.google.com/file/d/${fileId}/preview`;
-
-
-    /* =====================================
-       DOWNLOAD
-    ====================================== */
-
-    document
-      .getElementById(
-        "download-btn"
-      )
-      .href =
-
-      `https://drive.google.com/uc?export=download&id=${fileId}`;
-
-
-    /* =====================================
-       HOME BUTTON
-    ====================================== */
-
     const homeButton =
-
     document.getElementById(
       "viewer-home-button"
     );
 
-
-    /* =====================================
-       DESTIMECH
-    ====================================== */
-
-    if(from === "destimech"){
-
-      homeButton.href =
-      "index.html";
-
+    if(homeButton){
+      homeButton.href = "index.html";
     }
-
-
-    /* =====================================
-       ROBÓTICA
-    ====================================== */
-
-    else if(from === "robotica"){
-
-      localStorage.setItem(
-        "academicTab",
-        "robotica-grid"
-      );
 
       homeButton.href =
       "pages/academico.html";

@@ -106,6 +106,10 @@
       Sobre o INOVAMECH
     </a>
 
+    <a href="#feed-noticias" class="tab-link">
+      Feed de Notícias
+    </a>
+
   </nav>
 
 
@@ -119,23 +123,45 @@
          HERO
     ================================================== -->
 
-    <section class="hero-card">
+    <section class="home-grid">
 
-      <h2>
-        Laboratório de Inovação em Mecatrônica
-      </h2>
+      <section class="hero-card home-main-card">
 
-      <p>
+        <h2>
+          Laboratório de Inovação em Mecatrônica
+        </h2>
 
-        O INOVAMECH – Laboratório de Inovação em Mecatrônica é um ambiente interdisciplinar voltado ao desenvolvimento de tecnologias avançadas em automação, robótica, sistemas inteligentes e engenharia aplicada, integrando de forma estratégica as áreas de mecânica, eletrônica, computação, controle e inteligência artificial.
+        <p>
 
-        Incorporado ao NUPEM (Núcleo de Pesquisa em Engenharia Mecatrônica), o laboratório atua como um polo de pesquisa, inovação e desenvolvimento tecnológico, promovendo a conexão entre academia, indústria e sociedade por meio da criação de soluções inteligentes, sustentáveis e de alto impacto tecnológico.
+          O INOVAMECH – Laboratório de Inovação em Mecatrônica é um ambiente interdisciplinar voltado ao desenvolvimento de tecnologias avançadas em automação, robótica, sistemas inteligentes e engenharia aplicada, integrando de forma estratégica as áreas de mecânica, eletrônica, computação, controle e inteligência artificial.
 
-        O laboratório desenvolve projetos em automação de sistemas, Internet das Coisas (IoT), Inteligência Artificial (IA), Machine Learning, sistemas autônomos, modelagem computacional, eficiência energética, controle de sistemas dinâmicos e tecnologias embarcadas.
+          Incorporado ao NUPEM (Núcleo de Pesquisa em Engenharia Mecatrônica), o laboratório atua como um polo de pesquisa, inovação e desenvolvimento tecnológico, promovendo a conexão entre academia, indústria e sociedade por meio da criação de soluções inteligentes, sustentáveis e de alto impacto tecnológico.
 
-        Além da pesquisa aplicada, o INOVAMECH também promove capacitação técnica, colaboração científica, integração com empresas, desenvolvimento de protótipos, documentação técnica, projetos acadêmicos e iniciativas voltadas à transformação tecnológica e inovação industrial.
+          O laboratório desenvolve projetos em automação de sistemas, Internet das Coisas (IoT), Inteligência Artificial (IA), Machine Learning, sistemas autônomos, modelagem computacional, eficiência energética, controle de sistemas dinâmicos e tecnologias embarcadas.
 
-      </p>
+          Além da pesquisa aplicada, o INOVAMECH também promove capacitação técnica, colaboração científica, integração com empresas, desenvolvimento de protótipos, documentação técnica, projetos acadêmicos e iniciativas voltadas à transformação tecnológica e inovação industrial.
+
+        </p>
+
+      </section>
+
+      <aside id="feed-noticias" class="news-card">
+
+        <div class="section-header">
+
+          <h2>
+            Feed de Notícias
+          </h2>
+
+          <p>
+            Atualizações, eventos e destaques do INOVAMECH.
+          </p>
+
+        </div>
+
+        <div id="news-feed" class="news-list"></div>
+
+      </aside>
 
     </section>
 
@@ -284,19 +310,9 @@
   <script>
 
     loadRecommendationFavicons();
+    loadNewsFeed();
 
   </script>
-
-  <!-- Carregamento dos destaques reservado para uso futuro
-  <script>
-
-    loadDriveFiles(
-      "10sUVNboOMqffyNiBE2jNOBa5j6PjT3AZ",
-      "destaques-grid"
-    );
-
-  </script>
-  -->
 
 </body>
 
